@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Web Design Mastery | Luxterior</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --primary-color: #5c6c79;
+  --text-dark: #242424;
+  --text-light: #e2e8f0;
+  --white: #ffffff;
+  --max-width: 1200px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem 1rem;
+}
+
+.section__header {
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 3rem;
+  margin-bottom: 1rem;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__logo a {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.link {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.nav__icons {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav__icons span {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.header__container {
+  padding-top: 2rem;
+  position: relative;
+}
+
+.header__container img {
+  display: flex;
+  max-width: 1000px;
+  margin-left: auto;
+  border-radius: 5px;
+}
+
+.header__ribbon {
+  position: absolute;
+  top: 50%;
+  left: calc(25rem + -100%);
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+}
+
+.header__content {
+  max-width: 450px;
+  padding: 2rem 5rem;
+  color: var(--white);
+}
+
+.header__content p {
+  color: var(--text-light);
+}
+
+.arrow__down {
+  position: absolute;
+  bottom: 4rem;
+  right: 0;
+  height: 80px;
+  width: 100px;
+  display: grid;
+  place-content: center;
+  font-size: 1.5rem;
+  color: var(--white);
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.image__box {
+  position: absolute;
+  bottom: 4rem;
+  right: min(100%, 950px);
+  height: 80px;
+  width: 100px;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  z-index: -1;
+}
+
+.benefits__container .section__header {
+  max-width: 400px;
+  margin-bottom: 4rem;
+  margin-left: 10rem;
+  position: relative;
+}
+
+.benefits__container .section__header::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0;
+  transform: translate(-10rem, 50%);
+  width: 7rem;
+  height: 2px;
+  background-color: var(--primary-color);
+}
+
+.benefits__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.benefits__card {
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.benefits__card span i {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.benefits__content h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.benefits__content p {
+  font-size: 1rem;
+  line-height: 1.75rem;
+  color: var(--primary-color);
+}
+
+.experience__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.experience__image img {
+  max-width: 500px;
+  border-radius: 5px;
+}
+
+.experience__description {
+  margin-top: 2rem;
+  font-size: 1rem;
+  color: var(--primary-color);
+}
+
+.experience__features {
+  margin: 4rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 3rem;
+}
+
+.experience__col h3 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.experience__col p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+.experience__content button {
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  outline: none;
+  border: 2px solid var(--primary-color);
+  background-color: var(--white);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.experience__content button:hover {
+  color: var(--white);
+  background-color: var(--primary-color);
+}
+
+.process__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.process__grid {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: 50px auto;
+  column-gap: 1.5rem;
+  row-gap: 0.5rem;
+  align-items: center;
+}
+
+.process__grid .number {
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--white);
+  background-color: var(--primary-color);
+}
+
+.process__grid h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.process__grid p {
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+}
+
+.process__grid span:not(.last-child) {
+  height: 100%;
+  width: 2px;
+  margin: auto;
+  background-color: var(--text-light);
+}
+
+.process__image {
+  text-align: right;
+}
+
+.process__image img {
+  max-width: 500px;
+  border-radius: 5px;
+}
+
+.customer__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+
+.customer__nav .section__header {
+  max-width: 400px;
+}
+
+.customer__nav__icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.customer__nav__icons span {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.customer__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.customer__card {
+  padding: 2rem;
+  display: grid;
+  place-content: baseline;
+  gap: 1rem;
+  color: var(--white);
+  border-radius: 5px;
+  background-color: var(--primary-color);
+}
+
+.customer__card span i {
+  font-size: 4rem;
+}
+
+.customer__title {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.customer__description {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: var(--text-light);
+}
+
+.customer__content {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.customer__content span img {
+  display: flex;
+  max-width: 50px;
+  border-radius: 100%;
+}
+
+.customer__details h4 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.customer__details p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+.subscribe__container {
+  max-width: 600px;
+  text-align: center;
+  position: relative;
+}
+
+.subscribe__description {
+  color: var(--primary-color);
+}
+
+.subscribe__container form {
+  position: absolute;
+  width: calc(100% - 2rem);
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  background-color: var(--white);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.subscribe__container input {
+  width: 100%;
+  padding: 1rem 2rem;
+  font-size: 0.9rem;
+  outline: none;
+  border: none;
+}
+
+.subscribe__container button {
+  padding: 1rem 3rem;
+  color: var(--white);
+  outline: none;
+  border: none;
+  background-color: var(--primary-color);
+  cursor: pointer;
+}
+
+footer {
+  background-color: var(--primary-color);
+}
+
+.footer__container {
+  padding-top: 6rem;
+  display: grid;
+  grid-template-columns: 350px repeat(3, 1fr);
+  gap: 5rem;
+}
+
+.footer__logo {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 1.5rem;
+}
+
+.footer__col i {
+  font-size: 1rem;
+  margin-right: 1rem;
+}
+
+.footer__col h4 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--white);
+  margin-bottom: 1.5rem;
+}
+
+.footer__col p {
+  margin-bottom: 1rem;
+  color: var(--text-light);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.footer__col p:hover {
+  color: var(--white);
+}
+
+.footer__bar {
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  text-align: center;
+  color: var(--white);
+  border-top: 1px solid var(--white);
+}
+
+@media (width < 900px) {
+  .benefits__grid {
+    gap: 1rem;
+  }
+
+  .benefits__card {
+    flex-direction: column;
+  }
+
+  .customer__grid {
+    gap: 1rem;
+  }
+
+  .footer__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width < 600px) {
+  .nav__links {
+    display: none;
+  }
+
+  .header__ribbon {
+    background-color: rgba(92, 108, 121, 0.7);
+  }
+
+  .arrow__down {
+    display: none;
+  }
+
+  .benefits__container .section__header {
+    margin-left: 5rem;
+  }
+
+  .benefits__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .benefits__card {
+    flex-direction: row;
+  }
+
+  .experience__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .process__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .process__image {
+    grid-area: 1/1/2/2;
+  }
+
+  .customer__grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+  }
+
+  .footer__container {
+    gap: 2rem;
+  }
+}
+
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__logo"><a href="#">Luxterior</a></div>
+      <ul class="nav__links">
+        <li class="link">Home</li>
+        <li class="link">About</li>
+        <li class="link">Features</li>
+        <li class="link">Contacts</li>
+      </ul>
+      <div class="nav__icons">
+        <span><i class="ri-search-line"></i></span>
+        <span><i class="ri-menu-3-line"></i></span>
+      </div>
+    </nav>
+
+    <header>
+      <div class="section__container header__container">
+        <img src="assets/header.jpg" alt="header" />
+        <div class="header__ribbon">
+          <div class="header__content">
+            <h1 class="section__header">We help you make modern interior</h1>
+            <p>
+              We will help you to make an elegant and luxurious interior
+              designed by professional interior designers
+            </p>
+          </div>
+        </div>
+        <div class="arrow__down">
+          <i class="ri-arrow-down-line"></i>
+        </div>
+        <div class="image__box"></div>
+      </div>
+    </header>
+
+    <section class="section__container benefits__container">
+      <h2 class="section__header">Benefits you get when using our services</h2>
+      <div class="benefits__grid">
+        <div class="benefits__card">
+          <span><i class="ri-award-line"></i></span>
+          <div class="benefits__content">
+            <h4>Best Quality</h4>
+            <p>
+              All of our furniture uses the best materials and choices of our
+              customers.
+            </p>
+          </div>
+        </div>
+        <div class="benefits__card">
+          <span><i class="ri-truck-line"></i></span>
+          <div class="benefits__content">
+            <h4>Free Shipping</h4>
+            <p>
+              Free shipping every time you buy furniture from us without
+              exception.
+            </p>
+          </div>
+        </div>
+        <div class="benefits__card">
+          <span><i class="ri-checkbox-circle-line"></i></span>
+          <div class="benefits__content">
+            <h4>Warranty</h4>
+            <p>
+              Every time you buy our furniture products, you will get a warranty
+              without exception.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__container experience__container">
+      <div class="experience__image">
+        <img src="assets/image-1.jpg" alt="experience" />
+      </div>
+      <div class="experience__content">
+        <h2 class="section__header">We provide you the best experience</h2>
+        <p class="experience__description">
+          You don't worry about the results because all of these interiors are
+          made by people who are professionals in their fields with an elegant
+          and luxurious style and with premium quality materials.
+        </p>
+        <div class="experience__features">
+          <div class="experience__col">
+            <h3>17</h3>
+            <p>Years<br />experience</p>
+          </div>
+          <div class="experience__col">
+            <h3>85</h3>
+            <p>Awards<br />gained</p>
+          </div>
+          <div class="experience__col">
+            <h3>537</h3>
+            <p>Furnitures<br />sold</p>
+          </div>
+        </div>
+        <button>Learn more</button>
+      </div>
+    </section>
+
+    <section class="section__container process__container">
+      <div class="process__content">
+        <h2 class="section__header">We provide the best process experience</h2>
+        <div class="process__grid">
+          <div class="number">01</div>
+          <h4>Briefing</h4>
+          <span></span>
+          <p>
+            First thing you determine the concept and model you want, then
+            choose what colors and materials you want to use in your furniture.
+          </p>
+          <div class="number">02</div>
+          <h4>Processing</h4>
+          <span></span>
+          <p>
+            When the briefing process is complete and what the client wants has
+            been achieved. Then we carry out the execution of the desired
+            concept.
+          </p>
+          <div class="number">03</div>
+          <h4>Finishing</h4>
+          <span class="last-child"></span>
+          <p>
+            After the process is complete, we will immediately carry out the
+            finishing stage and we do it carefully and make sure there are no
+            mistakes.
+          </p>
+        </div>
+      </div>
+      <div class="process__image">
+        <img src="assets/image-2.jpg" alt="process" />
+      </div>
+    </section>
+
+    <section class="section__container customer__container">
+      <div class="customer__nav">
+        <h2 class="section__header">What our customers are saying</h2>
+        <div class="customer__nav__icons">
+          <span><i class="ri-arrow-left-line"></i></span>
+          <span><i class="ri-arrow-right-line"></i></span>
+        </div>
+      </div>
+      <div class="customer__grid">
+        <div class="customer__card">
+          <span><i class="ri-double-quotes-l"></i></span>
+          <h4 class="customer__title">The result given are very satisfying</h4>
+          <p class="customer__description">
+            Being able to work with the Luxterioris an extraordinary thing thry
+            provide excellent service and the results given are also very
+            satisfying by giving elegent impression.
+          </p>
+          <div class="customer__content">
+            <span><img src="assets/pic-1.jpeg" alt="user" /></span>
+            <div class="customer__details">
+              <h4>Ralph Edward</h4>
+              <p>Product Designer</p>
+            </div>
+          </div>
+        </div>
+        <div class="customer__card">
+          <span><i class="ri-double-quotes-l"></i></span>
+          <h4 class="customer__title">
+            The service provided is very good and friendly
+          </h4>
+          <p class="customer__description">
+            At that time I wanted to make a chair, I went to Luxterior and after
+            it was finished the results were unexpected. The results given are
+            in accordance with what I want.
+          </p>
+          <div class="customer__content">
+            <span><img src="assets/pic-2.jpg" alt="user" /></span>
+            <div class="customer__details">
+              <h4>Leslie Aleksander</h4>
+              <p>Housewife</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__container subscribe__container">
+      <h2 class="section__header">Subscribe to get the latest news about us</h2>
+      <p class="subscribe__description">
+        We recommend you to subscribe to our newspaper, enter your email below
+        to get our daily update about us.
+      </p>
+      <form>
+        <input type="text" placeholder="Enter your email address" />
+        <button>Subscribe</button>
+      </form>
+    </section>
+
+    <footer>
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <div class="footer__logo">Luxterior</div>
+          <p>
+            Find a wide range of high-quality furniture pieces that will elevate
+            the style and functionality of your home.
+          </p>
+          <p><i class="ri-phone-fill"></i> +919876543210</p>
+          <p>
+            <i class="ri-map-pin-2-fill"></i> Manipur, House-01, Mirpur-11.5
+            Bhaka-1258
+          </p>
+        </div>
+        <div class="footer__col">
+          <h4>Company</h4>
+          <p>Site Map</p>
+          <p>Search Terms</p>
+          <p>Advance Search</p>
+          <p>Suppliers</p>
+          <p>Our Stores</p>
+          <p>Privacy Policy</p>
+        </div>
+        <div class="footer__col">
+          <h4>About</h4>
+          <p>Login</p>
+          <p>About Us</p>
+          <p>Wishlist</p>
+          <p>Checkout</p>
+          <p>FAQ's</p>
+          <p>Contact Us</p>
+        </div>
+        <div class="footer__col">
+          <h4>Get in touch</h4>
+          <p>Questions or feedback?</p>
+          <p>We'd love to hear from you.</p>
+        </div>
+      </div>
+      <div class="footer__bar">
+        Copyright &#169; 2023 Web Design Mastery. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>
